@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wally Chang 張朝覺</title>
+  <meta name="description" content="Chao-Chueh Wally Chang — Senior Software Engineer. Resume and experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --text: #1d2330;
+      --muted: #5b6475;
+      --line: #e3e6eb;
+      --accent: #1f6feb;
+      --chip: #eef3fb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1218;
+        --surface: #171b23;
+        --text: #e6e9ef;
+        --muted: #9aa3b2;
+        --line: #2a303b;
+        --accent: #6ea8fe;
+        --chip: #1e2633;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.6 "Inter", system-ui, -apple-system, "Segoe UI", "Noto Sans TC", sans-serif;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 1040px;
+      margin: 32px auto;
+      padding: 0 16px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    header.card {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      padding: 28px;
+    }
+    .avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #fff;
+    }
+    .avatar img {
+      display: block;
+      width: 140%;
+      margin: -2% 0 0 -20%;
+    }
+    header h1 { margin: 0; font-size: 28px; line-height: 1.2; }
+    header .role { margin: 4px 0 12px; color: var(--muted); font-weight: 500; }
+    .contact { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; padding: 0; list-style: none; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 20px;
+      margin-top: 20px;
+      align-items: start;
+    }
+    aside, main { display: grid; gap: 20px; }
+    section.card { padding: 22px 24px; }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    h3 { margin: 0; font-size: 17px; }
+    h4 { margin: 14px 0 6px; font-size: 15px; }
+
+    dl.skills { margin: 0; }
+    dl.skills dt { font-weight: 600; font-size: 13px; color: var(--muted); }
+    dl.skills dd { margin: 2px 0 12px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+    .chips li {
+      background: var(--chip);
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 13px;
+    }
+
+    ul.plain { margin: 0; padding: 0; list-style: none; }
+    ul.plain li + li { margin-top: 8px; }
+    .sub { color: var(--muted); font-size: 13px; }
+
+    .job + .job { border-top: 1px solid var(--line); margin-top: 20px; padding-top: 20px; }
+    .job-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .job-title { color: var(--muted); font-weight: 500; }
+    .period { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    .job ul { margin: 6px 0 0; padding-left: 20px; }
+    .job li + li { margin-top: 4px; }
+    .job .chips { margin-top: 10px; }
+
+    @media (max-width: 760px) {
+      .page { margin: 16px auto; }
+      header.card { flex-direction: column; text-align: center; padding: 24px 16px; }
+      .contact { justify-content: center; }
+      .layout { grid-template-columns: 1fr; }
+      section.card { padding: 18px 16px; }
+    }
+
+    @media print {
+      :root { --bg: #fff; --surface: #fff; --text: #000; --muted: #444; --line: #ccc; --accent: #000; --chip: #f0f0f0; }
+      body { font-size: 12px; }
+      .page { margin: 0; max-width: none; }
+      .card { border: none; }
+      .job { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="card">
+      <div class="avatar"><img src="ccchang.png" alt="Portrait of Wally Chang"></div>
+      <div>
+        <h1>Chao-Chueh Wally Chang <span style="white-space:nowrap">張朝覺</span></h1>
+        <p class="role">Senior Software Engineer</p>
+        <ul class="contact">
+          <li><a href="mailto:wallyjue@gmail.com">wallyjue@gmail.com</a></li>
+          <li><a href="https://github.com/wallyjue">github.com/wallyjue</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside>
+        <section class="card">
+          <h2>Skills</h2>
+          <dl class="skills">
+            <dt>Languages</dt><dd>C#, Python, Java, TypeScript, C</dd>
+            <dt>Backend</dt><dd>.NET Core, Java Spring</dd>
+            <dt>Frontend</dt><dd>Vue.js, React, Playwright</dd>
+            <dt>DevOps</dt><dd>Docker, Terraform, Kubernetes, Git</dd>
+            <dt>Database</dt><dd>MSSQL, PostgreSQL, Redis</dd>
+            <dt>Cloud</dt><dd>AWS, Azure</dd>
+            <dt>Mobile</dt><dd>Android</dd>
+          </dl>
+        </section>
+
+        <section class="card">
+          <h2>Languages</h2>
+          <ul class="plain">
+            <li>Mandarin Chinese <span class="sub">— Native</span></li>
+            <li>English <span class="sub">— Business fluent, TOEIC 930</span></li>
+            <li>Japanese <span class="sub">— Business, JLPT N1, BJT J2</span></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Education</h2>
+          <ul class="plain">
+            <li>
+              <strong>M.S., Networking and Multimedia</strong><br>
+              National Taiwan University<br>
+              <span class="sub">Sept. 2009 · Advisor: <a href="http://www.ee.ntu.edu.tw/profile?id=60">Homer H. Chen</a></span>
+            </li>
+            <li>
+              <strong>B.S., Electrical Engineering</strong><br>
+              National Cheng Kung University<br>
+              <span class="sub">June 2007</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Certifications</h2>
+          <ul class="plain">
+            <li>AWS Certified CloudOps Engineer – Associate <span class="sub">· Mar. 2026</span></li>
+            <li>AWS Certified Developer – Associate <span class="sub">· Oct. 2025</span></li>
+            <li>AWS Certified Solutions Architect – Associate <span class="sub">· June 2025</span></li>
+            <li>Google Project Management Certificate <span class="sub">· Jan. 2024</span></li>
+            <li>JLPT N1 <span class="sub">· Jan. 2024</span></li>
+            <li>Business Japanese Test J2 <span class="sub">· Nov. 2023</span></li>
+            <li>TOEIC 930 <span class="sub">· Nov. 2023</span></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Patent</h2>
+          <p style="margin:0">“Video conference system”<br><span class="sub">US 8749611B2 · Issued Jun. 10, 2014</span></p>
+        </section>
+      </aside>
+
+      <main>
+        <section class="card">
+          <h2>Work Experience</h2>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Shizen Connect</h3>
+              <span class="period">Sept. 2024 – Present</span>
+            </div>
+            <div class="job-title">Research &amp; Development / Senior Software Engineer</div>
+            <h4>New features for an energy management platform</h4>
+            <ul>
+              <li>Led the planning and execution of new feature development for an energy data management platform, coordinating requirements between stakeholders and engineering teams.</li>
+              <li>Designed and oversaw profitability simulation projects for electricity transactions, translating business objectives into technical deliverables.</li>
+              <li>Utilized cloud-based and data analysis tools to support project planning, validation, and decision-making.</li>
+              <li>Collaborated with cross-functional teams to ensure feature feasibility, system scalability, and on-time delivery.</li>
+            </ul>
+            <ul class="chips"><li>AWS Lambda</li><li>SES</li><li>EventBridge</li><li>Google Colab</li><li>Jupyter Notebook</li></ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Japan Advanced Semiconductor Manufacturing (TSMC)</h3>
+              <span class="period">Feb. 2023 – Aug. 2024</span>
+            </div>
+            <div class="job-title">IT Specialist / Senior DevOps Engineer</div>
+            <h4>IT systems for a newly built semiconductor foundry</h4>
+            <ul>
+              <li>Communicated with stakeholders and wrote system requirement specifications for development.</li>
+              <li>Established and executed rollout plans for 30 systems with stakeholders and DevOps teams.</li>
+              <li>Conducted 30+ user interviews to understand pain points and worked with the home development team to build solutions.</li>
+              <li>Communicated with internal and external parties in English, Japanese and Chinese.</li>
+              <li>Deployed and monitored microservice nodes with Argo CD and Prometheus.</li>
+            </ul>
+            <ul class="chips"><li>Argo CD</li><li>Prometheus</li></ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Protolabs Japan G.K.</h3>
+              <span class="period">May 2016 – Oct. 2022</span>
+            </div>
+            <div class="job-title">Senior Software Engineer</div>
+            <h4>Protolabs 2.0 — digital quoting platform and MES in a microservice architecture</h4>
+            <ul>
+              <li>Participated in the design and implementation of a microservice system tailored for the manufacturing process.</li>
+              <li>Created design and implementation plans and executed them using Agile methods.</li>
+              <li>Designed and implemented frontend UI, backend business logic, database access and message queues for optimal performance.</li>
+              <li>Designed and implemented the CI/CD pipeline on Azure DevOps.</li>
+              <li>Worked as a trusted, self-disciplined member of a fully remote team.</li>
+              <li>Took SRE duty to ensure high availability of the web apps.</li>
+            </ul>
+            <ul class="chips"><li>.NET Core</li><li>C#</li><li>Vue.js</li><li>TypeScript</li><li>Vuetify</li><li>webpack</li><li>nginx</li><li>Azure DevOps</li><li>Docker</li><li>RavenDB</li><li>MSSQL</li><li>RabbitMQ</li><li>Datadog</li><li>Splunk</li><li>PagerDuty</li><li>SonarQube</li></ul>
+
+            <h4>Project Kaizen — maintenance and improvement of the existing system</h4>
+            <ul>
+              <li>Worked with stakeholders to understand their needs and proposed solutions and plans.</li>
+              <li>Planned design, implementation, testing, deployment and user communication.</li>
+              <li>Contributed to a 30% increase in global revenue.</li>
+            </ul>
+            <ul class="chips"><li>.NET Framework Web Forms</li></ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>e-Jan Networks</h3>
+              <span class="period">Oct. 2014 – May 2016</span>
+            </div>
+            <div class="job-title">Senior Software Engineer</div>
+            <h4>CACHATTO Business Messenger — workplace communication tool</h4>
+            <ul>
+              <li>Led a small team in Japan to drive development tasks.</li>
+              <li>Developed and delivered a web-based chat application.</li>
+            </ul>
+            <ul class="chips"><li>Java</li><li>JavaScript</li><li>jQuery</li></ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>QNAP Systems</h3>
+              <span class="period">Feb. 2013 – Jul. 2014</span>
+            </div>
+            <div class="job-title">Software Engineer</div>
+            <h4>myQNAPcloud</h4>
+            <ul>
+              <li>Developed and deployed the client application connecting to the cloud service.</li>
+              <li>Built the client UI with ExtJS and the backend logic in Linux C.</li>
+              <li>Delivered a lightweight client; the system grew to handle millions of connections worldwide.</li>
+            </ul>
+            <ul class="chips"><li>C</li><li>JavaScript</li><li>ExtJS</li></ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Quanta Research Institute, Quanta Computer</h3>
+              <span class="period">Dec. 2009 – Feb. 2013</span>
+            </div>
+            <div class="job-title">Specialist <span class="period">(Jan. 2012 – Feb. 2013)</span> · Software Engineer <span class="period">(Dec. 2009 – Dec. 2012)</span></div>
+            <h4>QUCA — video conference and broadcasting system</h4>
+            <ul>
+              <li>Led Android software development and planning; delivered the Android controller app and an Android video broadcasting system, which later evolved into a tele-medical platform used in Taiwan.</li>
+              <li>Initiated a video conferencing set-top box system providing video and voice calls.</li>
+              <li>Led development of the Linux controller software and coordinated with vendors.</li>
+              <li>US Patent 8749611B2 “Video conference system”.</li>
+            </ul>
+            <ul class="chips"><li>C</li><li>Linux</li><li>Java</li><li>Android</li></ul>
+          </article>
+        </section>
+
+        <section class="card">
+          <h2>Side Projects</h2>
+          <article class="job">
+            <div class="job-head">
+              <h3>FomoSports × TRON</h3>
+              <span class="period">Oct. 2018 – Jun. 2019</span>
+            </div>
+            <div class="job-title">Frontend Engineer</div>
+            <h4>FOMOSPORTS — blockchain betting game on Web3 smart contracts</h4>
+            <ul>
+              <li>Responsible for frontend development and deployment; delivered the web app on a tight schedule.</li>
+              <li>Won first place in the TRON accelerator competition.</li>
+            </ul>
+            <ul class="chips"><li>TypeScript</li><li>Vue.js</li></ul>
+          </article>
+        </section>
+
+        <section class="card">
+          <h2>Open Source</h2>
+          <p style="margin:0">Contributions to Vuetify and asp-net-core-vue-starter. See <a href="https://github.com/wallyjue">github.com/wallyjue</a>.</p>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
